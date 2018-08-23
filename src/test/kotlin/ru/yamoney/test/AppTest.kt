@@ -1,16 +1,18 @@
 package ru.yamoney.test
 
+import org.junit.Test
+
 
 class AppTest {
 
-/*    @Test
+    @Test
     fun payment() {
-        main(arrayOf("payment", "Вася", "23", "4454"))
+        main(arrayOf("payment", "Вася", "25", "4455"))
     }
 
     @Test
     fun deposit() {
-        main(arrayOf("deposit", "Вася", "123", "4454"))
+        main(arrayOf("deposit", "Вася", "123"))
     }
 
     @Test
@@ -20,6 +22,6 @@ class AppTest {
 
     @Test
     fun shopInfo() {
-        main(arrayOf("shop_info", "4454"))
-    }*/
+        main(arrayOf("shop_info", "4455"))
+    }
 }
