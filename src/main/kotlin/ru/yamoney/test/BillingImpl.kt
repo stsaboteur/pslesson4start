@@ -27,7 +27,7 @@ class BillingImpl : Billing {
                 .forEach {
                     userBalance = it.calculate(userBalance)
                 }
-        println(userBalance)
+        println("Balance of $user is $userBalance")
     }
 
     override fun addOperation(operation: Operation) {

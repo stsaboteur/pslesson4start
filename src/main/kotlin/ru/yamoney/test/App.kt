@@ -10,6 +10,7 @@ java -jar app.jar [COMMAND] [ARGUMENTS]
             deposit %USER% %SUM%
             balance %USER%
             shop_info %SHOP_ID%
+            transfer %SENDER% %RECEIVER% %SUM%
 """
 
 val billing: Billing = BillingImpl()
@@ -21,6 +22,10 @@ fun main(args: Array<String>) {
             "deposit" -> billing.addOperation(Deposit(BigDecimal(args[2]), args[1]))
             "balance" -> billing.getUserBalance(args[1])
             "shop_info" -> billing.getShopIdOperations(args[1])
+            "transfer" -> {
+                billing.addOperation(Transfer(BigDecimal(args[3]), args[2]))
+                billing.addOperation(Transfer(BigDecimal(args[3]).negate(), args[1]))
+            }
             else -> throw IllegalArgumentException("Unknown command")
 
         }
